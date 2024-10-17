@@ -1,0 +1,33 @@
+5. Friend Functions
+Concept: A friend function is a function that is not a member of a class but has access to its private and protected members.
+
+Example:
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Box {
+private:
+    int length, width, height;
+
+public:
+    Box(int l, int w, int h) : length(l), width(w), height(h) {}
+
+    // Friend function
+    friend int calculateVolume(Box b);
+};
+
+int calculateVolume(Box b) {
+    return b.length * b.width * b.height;  // Accessing private members
+}
+
+int main() {
+    Box box(3, 4, 5);
+    cout << "Volume of box: " << calculateVolume(box) << endl;  // Accessing through friend function
+    return 0;
+}
+Interview Questions:
+
+What is the purpose of a friend function?
+How do friend functions differ from member functions?
