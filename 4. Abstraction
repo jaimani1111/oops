@@ -1,0 +1,43 @@
+
+Concept: Abstraction is the concept of hiding the complex reality while exposing only the necessary parts. It can be achieved using abstract classes and interfaces.
+
+Example:
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    virtual void sound() = 0;  // Pure virtual function
+};
+
+class Dog : public Animal {
+public:
+    void sound() override {
+        cout << "Dog barks" << endl;
+    }
+};
+
+class Cat : public Animal {
+public:
+    void sound() override {
+        cout << "Cat meows" << endl;
+    }
+};
+
+int main() {
+    Animal* animal1 = new Dog();  // Pointer to base class
+    Animal* animal2 = new Cat();  // Pointer to base class
+
+    animal1->sound();  // Calls Dog's sound
+    animal2->sound();  // Calls Cat's sound
+
+    delete animal1;    // Clean up
+    delete animal2;    // Clean up
+    return 0;
+}
+Interview Questions:
+
+What is the difference between abstraction and encapsulation?
+Can you have a class that is both abstract and encapsulated?
