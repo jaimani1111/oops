@@ -1,0 +1,35 @@
+. Polymorphism (Runtime Polymorphism)
+Concept: Polymorphism allows methods to do different things based on the object that it is acting upon. Runtime polymorphism is achieved through virtual functions.
+
+Example:
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void show() {
+        cout << "Base class show method" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void show() override {
+        cout << "Derived class show method" << endl;
+    }
+};
+
+int main() {
+    Base* b;           // Base class pointer
+    Derived d;        // Derived class object
+    b = &d;           // Pointing to derived class object
+
+    b->show();        // Calls the derived class method
+    return 0;
+}
+Interview Questions:
+
+How does C++ achieve polymorphism?
+What is the role of the virtual keyword in C++?
