@@ -1,0 +1,39 @@
+1. Encapsulation
+Concept: Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to some of the object’s components and can prevent the accidental modification of data.
+
+Example:
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Hello {
+private:
+    int a;  // Private variable
+
+public:
+    // Constructor to initialize 'a'
+    Hello(int value) : a(value) {}
+
+    // Method to access the private variable
+    int getValue() {
+        return a;  // Return the value of 'a'
+    }
+
+    // Method to set the value of 'a'
+    void setValue(int value) {
+        a = value;  // Modify the private variable
+    }
+};
+
+int main() {
+    Hello h(5);
+    cout << "Initial value: " << h.getValue() << endl;  // Accessing via public method
+    h.setValue(10);  // Setting new value
+    cout << "Updated value: " << h.getValue() << endl;  // Accessing updated value
+    return 0;
+}
+Interview Questions:
+
+What is encapsulation, and how does it enhance data security?
+Can you provide an example of when you would use encapsulation in a project?
