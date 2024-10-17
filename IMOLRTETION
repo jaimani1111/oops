@@ -1,4 +1,33 @@
 // Online C++ compiler to run C++ program online
+
+ENCAPSULATION  #include <iostream>
+using namespace std;
+
+class hello {
+private:
+    int a;
+
+public:
+    int he(int a) {  // Return type changed to int
+        int c = a;
+        cout << c << endl;  // Printing the value
+        return c;  // Returning the value of c
+    }
+};
+
+int main() {
+    hello h1;
+    int result = h1.he(5);  // Store the returned value
+    cout << "Returned value: " << result << endl;  // Display the returned value
+    return 0;
+}
+
+
+
+
+
+
+
 /*#include <iostream>
 using namespace std;
 class hello{
