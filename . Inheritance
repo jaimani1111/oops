@@ -1,0 +1,33 @@
+. Inheritance
+Concept: Inheritance is a mechanism where a new class inherits properties and behaviors (methods) from an existing class. It promotes code reusability.
+
+Example:
+cpp
+Copy code
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void sound() {
+        cout << "Animal makes a sound" << endl;
+    }
+};
+
+class Dog : public Animal {
+public:
+    void bark() {
+        cout << "Dog barks" << endl;
+    }
+};
+
+int main() {
+    Dog dog;
+    dog.sound();  // Inherited method
+    dog.bark();   // Dog's own method
+    return 0;
+}
+Interview Questions:
+
+What is the difference between public, protected, and private inheritance?
+Can you explain method overriding and provide an example?
