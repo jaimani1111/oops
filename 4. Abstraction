@@ -1,4 +1,46 @@
 
+ABSTACT CLASS IN JAVA IS CLASS WHICH CANNOT BE INSTATINED MEANS IT OBJECTS CANNOT BE CREATED WITH ABSTRACT CLASS .
+
+SUPPOSE WE HAVE A PARENT CLASS ANIMAL
+PUBLIC ABSTRACT CLASS ANIMAL{
+PUBLICABSTRACT  VOID SOUND(); // ABSTARCT METHOD CANNOT BE DEFINED
+}
+PUBLIC CLASS CAT EXTENDS ANIMAL{
+@OVERIDE
+PUBLIC VOID SOUND(){
+SYSTEM.OUT.PRINTLN("HELLO");}
+
+
+EXAMPLE HERE // Abstract parent class
+public abstract class Animal {
+    // Abstract method - no body
+    public abstract void sound();
+}
+
+// Concrete subclass
+public class Cat extends Animal {
+    // Implementation of the abstract method
+    @Override
+    public void sound() {
+        System.out.println("Meow"); // Correct implementation
+    }
+}
+
+// Testing the classes
+public class Main {
+    public static void main(String[] args) {
+        // Animal animal = new Animal(); // This will cause a compilation error because Animal is abstract.
+        Animal cat = new Cat(); // Polymorphism: Animal reference to Cat object.
+        cat.sound(); // Output: Meow
+    }
+}
+
+
+
+
+
+
+
 Concept: Abstraction is the concept of hiding the complex reality while exposing only the necessary parts. It can be achieved using abstract classes and interfaces.
 
 Example:
